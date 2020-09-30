@@ -1,6 +1,6 @@
 {
   "name": "@lihbr/utils-nuxt.payload",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "lihbr utils for Nuxt.js",
   "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
   "license": "MIT",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "consola": "2.15.0",
-    "lodash": "4.17.20",
-    "isomorphic-unfetch": "3.1.0"
+    "isomorphic-unfetch": "3.1.0",
+    "lodash": "4.17.20"
   }
 }

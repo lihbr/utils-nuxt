@@ -1,6 +1,6 @@
 {
   "name": "@lihbr/utils-nuxt.env",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "lihbr utils for Nuxt.js",
   "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
   "license": "MIT",
