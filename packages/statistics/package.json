@@ -1,0 +1,27 @@
+{
+  "name": "@lihbr/utils-nuxt.statistics",
+  "version": "0.1.1",
+  "description": "lihbr utils for Nuxt.js",
+  "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
+  "license": "MIT",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=10.16.3",
+    "yarn": ">=1.13.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/lihbr/utils-nuxt.git",
+    "directory": "packages/statistics"
+  },
+  "dependencies": {
+    "statuses": "2.0.0"
+  }
+}
