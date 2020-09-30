@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.smart-link@0.1.0...@lihbr/utils-nuxt.smart-link@0.1.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* **smart-link:** missing export ([fddf2bd](https://github.com/lihbr/utils-nuxt/commit/fddf2bd2d5ca79b9f470cad7ea9ab7ebb35c5100))
+
+
+
+
+
 # 0.1.0 (2020-09-30)
 
 
