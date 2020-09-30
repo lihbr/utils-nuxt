@@ -25,3 +25,5 @@ const isInternal = ({ external, internal, href }) => {
   const regex = /^\/(?!\/|assets).*$/gm; // match internal links
   return regex.test(href);
 };
+
+module.exports = isInternal;
