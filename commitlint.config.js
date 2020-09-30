@@ -5,7 +5,17 @@ module.exports = {
     "scope-enum": [
       2,
       "always",
-      ["env", "head", "payload", "smart-link", "statistics", "release", "config", "deps", "misc"]
+      [
+        "env",
+        "head",
+        "payload",
+        "smart-link",
+        "statistics",
+        "release",
+        "config",
+        "deps",
+        "misc"
+      ]
     ],
     "scope-empty": [2, "never"]
   }
