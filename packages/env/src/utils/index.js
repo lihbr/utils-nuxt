@@ -1,3 +1,5 @@
 const firstTrue = require("./firstTrue");
 
-module.exports = firstTrue;
+module.exports = {
+  firstTrue
+};
