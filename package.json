@@ -1,7 +1,7 @@
 {
   "name": "utils-nuxt",
   "description": "lihbr utils for Nuxt.js",
-  "private": "true",
+  "private": true,
   "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
   "license": "MIT",
   "scripts": {
