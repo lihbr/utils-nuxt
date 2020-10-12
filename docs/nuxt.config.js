@@ -5,6 +5,9 @@ export default theme({
   loading: {
     color: "#e84311"
   },
+  buildModules: [
+    ["@nuxtjs/netlify-files", { existingFilesDirectory: __dirname }]
+  ],
   content: {
     markdown: {
       prism: {

@@ -11,5 +11,8 @@
   "dependencies": {
     "@nuxt/content-theme-docs": "0.7.2",
     "nuxt": "2.14.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/netlify-files": "1.2.0"
   }
 }
