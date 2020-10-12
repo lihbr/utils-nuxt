@@ -1,0 +1,98 @@
+---
+title: "payload"
+menuTitle: "payload"
+subtitle: ""
+badge: ""
+description: "lihbr utils for Nuxt.js"
+position: 220
+category: "Modules"
+version: 0.1
+fullscreen: false
+---
+
+`@lihbr/utils-nuxt.payload` makes `context.payload` available in development (sorta).
+
+## Installation
+
+<alert type="info">
+
+Make sure you checked [prerequisites](/prerequisites) before proceeding to installation~
+
+</alert>
+
+Add `@lihbr/utils-nuxt.payload` dependency to your project:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add --dev @lihbr/utils-nuxt.payload
+```
+
+  </code-block>
+  <code-block label="npm">
+
+```bash
+npm install --save-dev @lihbr/utils-nuxt.payload
+```
+
+  </code-block>
+</code-group>
+
+Then, add `@lihbr/utils-nuxt.payload` to the `buildModules` section of your `nuxt.config.js` file:
+
+```javascript[nuxt.config.js]
+export default {
+  buildModules: [
+    [
+      "@lihbr/utils-nuxt.payload",
+      {
+        /* see configuration below for more */
+      }
+    ]
+  ]
+};
+```
+
+## Usage
+
+This module injects a `$pagePayload` method inside Nuxt.js context allowing your to resolve page payload provided through Nuxt.js [generate routes payload options](https://nuxtjs.org/guides/configuration-glossary/configuration-generate#speeding-up-dynamic-route-generation-with-payload):
+
+```vue[~/pages/index.vue]
+<script>
+export default {
+  async asyncData(context) {
+    return await context.$pagePayload(context);
+  }
+};
+</script>
+```
+
+## Reference
+
+### Configuration
+
+#### payloadBaseRoute
+
+- Type: `String`
+- Default: `"/payload"`
+
+Base route from which payload will be served while in development.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  payloadBaseRoute: "/dev/payload"
+}
+```
+<!-- prettier-ignore-end -->
+
+### Configuration Defaults
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎ options]
+{
+  payloadBaseRoute: "/payload"
+}
+```
+<!-- prettier-ignore-end -->

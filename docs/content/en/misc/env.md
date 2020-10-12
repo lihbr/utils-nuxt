@@ -1,0 +1,68 @@
+---
+title: "env"
+menuTitle: "env"
+subtitle: ""
+badge: ""
+description: "lihbr utils for Nuxt.js"
+position: 410
+category: "Miscellaneous"
+version: 0.1
+fullscreen: false
+features:
+  - "Quickly get all the info you need to kickstart your Nuxt.js application"
+---
+
+`@lihbr/utils-nuxt.env` configures an object from available environment variables to quickly setup a Nuxt.js application.
+
+<alert type="warning">
+
+Out of current packages, this one is probably the less agnostic one, I definitely need to figure out a way to make it more agnostic and actually usable.
+
+</alert>
+
+## Features
+
+<list :items="features"></list>
+
+## Installation
+
+<alert type="info">
+
+Make sure you checked [prerequisites](/prerequisites) before proceeding to installation~
+
+</alert>
+
+Add `@lihbr/utils-nuxt.env` dependency to your project:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add --dev @lihbr/utils-nuxt.env
+```
+
+  </code-block>
+  <code-block label="npm">
+
+```bash
+npm install --save-dev @lihbr/utils-nuxt.env
+```
+
+  </code-block>
+</code-group>
+
+## Usage
+
+Inside your `nuxt.config.js` file:
+
+```javascript[nuxt.config.js]
+const envConfig = require("@lihbr/utils-nuxt.env");
+const pkg = require("./package.json");
+
+const env = envConfig(pkg, settings, GLOBAL_CONTENT);
+
+export default {
+  /* your Nuxt.js configuration */
+  /* you can used parsed values from `env` in it */
+};
+```

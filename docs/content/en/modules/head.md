@@ -1,0 +1,351 @@
+---
+title: "head"
+menuTitle: "head"
+subtitle: ""
+badge: ""
+description: "lihbr utils for Nuxt.js"
+position: 210
+category: "Modules"
+version: 0.1
+fullscreen: false
+features:
+  - "Add basic head information: lang, charset, etc."
+  - "Add global values for Schema.org, Open Graph, Twitter, etc."
+  - "Overwrite global values with per-page head information"
+  - "Enhance your pages with complex structured data"
+---
+
+`@lihbr/utils-nuxt.head` configures [vue-meta](https://vue-meta.nuxtjs.org/) with all the good stuff: Schema.org, Open Graph, Twitter, etc.
+
+This module is similar to `@nuxtjs/pwa` [Meta module](https://pwa.nuxtjs.org/meta), but more opinionated.
+
+## Features
+
+<list :items="features"></list>
+
+## Installation
+
+<alert type="info">
+
+Make sure you checked [prerequisites](/prerequisites) before proceeding to installation~
+
+</alert>
+
+Add `@lihbr/utils-nuxt.head` dependency to your project:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add --dev @lihbr/utils-nuxt.head
+```
+
+  </code-block>
+  <code-block label="npm">
+
+```bash
+npm install --save-dev @lihbr/utils-nuxt.head
+```
+
+  </code-block>
+</code-group>
+
+Then, add `@lihbr/utils-nuxt.head` to the `buildModules` section of your `nuxt.config.js` file and configure your application name, description and URL:
+
+```javascript[nuxt.config.js]
+export default {
+  buildModules: [
+    [
+      "@lihbr/utils-nuxt.head",
+      {
+        name: "My Company",
+        description: "We craft amazing products.",
+        url: "https://example.com"
+        /* see configuration below for more */
+      }
+    ]
+  ]
+};
+```
+
+## Usage
+
+This module injects a `$buildHead` method inside your Vue.js application that you need to use on every page `head` method:
+
+```vue[~/pages/index.vue]
+<script>
+export default {
+  head() {
+    return this.$buildHead({
+      title: "Home",
+      description: "Welcome to My Company home page",
+      metaImage: {
+        og: "https://example.com/home-1200x630.jpg",
+        tw: "https://example.com/home-1200x600.jpg"
+      },
+      path: this.$route.path,
+      additionalStructuredData: []
+    });
+  }
+};
+</script>
+```
+
+This function will resolve meta tags for this page with provided options against default options provided to the module itself. Except `path`, every key is optional, check `$buildHead` [function reference](/modules/head#buildhead) for more information.
+
+## Reference
+
+### Configuration
+
+#### lang
+
+- Type: `String`
+- Default: `"en"`
+
+Application language to apply on `html` tag `lang` attribute.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  lang: "fr"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### name
+
+- Type: `String`
+- `required`
+
+Application name used across different meta tags.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  name: "My Company"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### description
+
+- Type: `String`
+- `required`
+
+Application default description used across different meta tags as fallback when no page-specific description is provided.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  description: "We craft amazing products."
+}
+```
+<!-- prettier-ignore-end -->
+
+#### metaImage
+
+- Type: `Object`
+- Default: `{ og: undefined, tw: undefined }`
+
+Application default meta image used for Open Graph (`og`) and Twitter (`tw`) meta image tags as fallback when no page-specific meta image is provided.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  metaImage: {
+    og: "https://example.com/1200x630.jpg",
+    tw: "https://example.com/1200x600.jpg"
+  }
+}
+```
+<!-- prettier-ignore-end -->
+
+> Open Graph is differentiated from Twitter meta image because Open Graph prefers `1.91:1` aspect ratio where Twitter prefers `2:1`.
+
+#### twitterHandle
+
+- Type: `String`
+- Default: `undefined`
+
+Application Twitter handle used on `twitter:site` meta tag.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  twitterHandle: "@li_hbr"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### backgroundColor
+
+- Type: `String`
+- Default: `"#fefefe"`
+
+Application background color used on `theme-color` meta tag.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  backgroundColor: "#fff7f7"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### accentColor
+
+- Type: `String`
+- Default: `"#111111"`
+
+Application accent color used on `msapplication-TileColor` meta tag and `mask-icon` link tag.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  accentColor: "#e84311"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### titleFormat
+
+- Type: `String`
+- Default: `"%page% - %site%"`
+
+Application title format used to define page title. `%page%` will get replaced by per-page provided title and `%site%` by mandatory `name` option. If no per-page title is provided on `name` gets displayed.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  titleFormat: "%page% | %site%"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### url
+
+- Type: `String`
+- `required`
+
+Application URL required to define some meta tags.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  url: "https://example.com"
+}
+```
+<!-- prettier-ignore-end -->
+
+### Configuration Defaults
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎ options]
+{
+  lang: "en",
+  name: "",
+  description: "",
+  metaImage: {
+    og: undefined,
+    tw: undefined
+  },
+  twitterHandle: undefined,
+  backgroundColor: "#fefefe",
+  accentColor: "#111111",
+  titleFormat: "%page% - %site%",
+  url: undefined
+}
+```
+<!-- prettier-ignore-end -->
+
+<!-- prettier-ignore-start -->
+### $buildHead
+<!-- prettier-ignore-end -->
+
+#### title
+
+- Type: `String`
+- Default: `name` option provided to module, skipping `titleFormat`
+
+Page title used to build final page title following module `titleFormat` option.
+
+<!-- prettier-ignore-start -->
+```javascript[function‏‏‎‏‏‎ options]
+{
+  title: "Home"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### description
+
+- Type: `String`
+- Default: `description` option provided to module
+
+Page description used across different meta tags.
+
+<!-- prettier-ignore-start -->
+```javascript[function‏‏‎‏‏‎ options]
+{
+  description: "Welcome to My Company home page"
+}
+```
+<!-- prettier-ignore-end -->
+
+#### metaImage
+
+- Type: `Object`
+- Default: `metaImage` option provided to module
+
+Page meta image used for Open Graph (`og`) and Twitter (`tw`) meta image tags.
+
+<!-- prettier-ignore-start -->
+```javascript[function‏‏‎‏‏‎ options]
+{
+  metaImage: {
+    og: "https://example.com/home-1200x630.jpg",
+    tw: "https://example.com/home-1200x600.jpg"
+  }
+}
+```
+<!-- prettier-ignore-end -->
+
+> Open Graph is differentiated from Twitter meta image because Open Graph prefers `1.91:1` aspect ratio where Twitter prefers `2:1`.
+
+#### path
+
+- Type: `String`
+- `required`
+
+Current page path used across different meta tags, you might want to stick with router path property:
+
+<!-- prettier-ignore-start -->
+```javascript[function‏‏‎‏‏‎ options]
+{
+  path: this.$route.path
+}
+```
+<!-- prettier-ignore-end -->
+
+#### additionalStructuredData
+
+- Type: `Array`
+- Default: `[]`
+
+Additional [structured data](https://developers.google.com/search/docs/guides/sd-policies) objects that will end up stringified and injected under an `application/ld+json` script.
+
+<!-- prettier-ignore-start -->
+```javascript[function‏‏‎‏‏‎ options]
+{
+  additionalStructuredData: [
+    /* structured data objects */
+  ]
+}
+```
+<!-- prettier-ignore-end -->
+
+<alert type="info">
+
+Learn more about structured data on [Google's documentation](https://developers.google.com/search/docs/guides/sd-policies).
+
+</alert>

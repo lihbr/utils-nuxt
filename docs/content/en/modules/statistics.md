@@ -1,0 +1,92 @@
+---
+title: "statistics"
+menuTitle: "statistics"
+subtitle: ""
+badge: ""
+description: "lihbr utils for Nuxt.js"
+position: 230
+category: "Modules"
+version: 0.1
+fullscreen: false
+features:
+  - "Know how many pages per second you are generated"
+---
+
+`@lihbr/utils-nuxt.statistics` provides some (not much) statistics when using Nuxt.js
+
+## Features
+
+<list :items="features"></list>
+
+## Installation
+
+<alert type="info">
+
+Make sure you checked [prerequisites](/prerequisites) before proceeding to installation~
+
+</alert>
+
+Add `@lihbr/utils-nuxt.statistics` dependency to your project:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add --dev @lihbr/utils-nuxt.statistics
+```
+
+  </code-block>
+  <code-block label="npm">
+
+```bash
+npm install --save-dev @lihbr/utils-nuxt.statistics
+```
+
+  </code-block>
+</code-group>
+
+Then, add `@lihbr/utils-nuxt.statistics` to the `buildModules` section of your `nuxt.config.js` file:
+
+```javascript[nuxt.config.js]
+export default {
+  buildModules: [
+    [
+      "@lihbr/utils-nuxt.statistics",
+      {
+        /* see configuration below for more */
+      }
+    ]
+  ]
+};
+```
+
+## Reference
+
+### Configuration
+
+#### ignore
+
+- Type: `Array`
+- Default: `[]`
+
+Tell which statistics functions to ignore.
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎‏‏‎ options]
+{
+  // will ignore `generate` statistics functions
+  // (currently the only one available)
+  ignore: ["generate"]
+}
+```
+<!-- prettier-ignore-end -->
+
+### Configuration Defaults
+
+<!-- prettier-ignore-start -->
+```javascript[module‏‏‎ options]
+{
+  ignore: []
+}
+```
+<!-- prettier-ignore-end -->
