@@ -16,4 +16,4 @@ Those packages are hosted on [GitHub npm Registry](https://github.com/features/p
 @lihbr:registry=https://npm.pkg.github.com
 ```
 
-This line simply tell your package manager, either Yarn or npm, to fetch packages under `@lihbr` scope from GitHub's registry.
+This line simply tells your package manager, either Yarn or npm, to fetch packages under `@lihbr` scope from GitHub's registry instead of npm's.
