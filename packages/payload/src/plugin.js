@@ -17,9 +17,12 @@ export default context => {
       console.error(err);
     }
 
+    <% if (options.dev) { %>
+    // Errors happening outside of dev mode should be leggit 404s
     if (context.$sentry) {
       context.$sentry.captureException(err);
     }
+    <% } %>
 
     if (err instanceof NotFoundError) {
       context.error({ statusCode: err.statusCode, message: "" });
