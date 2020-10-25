@@ -113,19 +113,6 @@ const configure = (pkg = {}, settings = {}, GLOBAL_CONTENT) => {
     }
   })();
 
-  /**
-   * Misc
-   */
-
-  // Consola log level (0 = error+, 1 = warn+, 5 = all)
-  const CONSOLA_LEVEL = (() => {
-    if (typeof process.env.CONSOLA_LEVEL !== "undefined") {
-      return process.env.CONSOLA_LEVEL;
-    } else {
-      return 1;
-    }
-  })();
-
   return {
     DEV,
     COMMIT_REF,
@@ -147,8 +134,6 @@ const configure = (pkg = {}, settings = {}, GLOBAL_CONTENT) => {
 
     GTM_ID,
     GTM_FRIENDLY,
-
-    CONSOLA_LEVEL,
 
     GLOBAL_CONTENT
   };
