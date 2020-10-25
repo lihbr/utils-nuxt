@@ -9,7 +9,7 @@ category: "Modules"
 version: 0.1
 fullscreen: false
 features:
-  - "Know how many pages per second you are generated"
+  - "Know how many pages per second you are generating"
 ---
 
 `@lihbr/utils-nuxt.statistics` provides some (not much) statistics when using Nuxt.js
