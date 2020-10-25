@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.smart-link@0.1.1...@lihbr/utils-nuxt.smart-link@0.2.0) (2020-10-25)
+
+
+### Features
+
+* **smart-link:** remove consola from client side ([8fcccee](https://github.com/lihbr/utils-nuxt/commit/8fccceed9c67f2eda089d3ffb7947ba39562282a))
+
+
+
+
+
 ## [0.1.1](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.smart-link@0.1.0...@lihbr/utils-nuxt.smart-link@0.1.1) (2020-09-30)
 
 

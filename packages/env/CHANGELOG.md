@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.env@0.1.2...@lihbr/utils-nuxt.env@0.2.0) (2020-10-25)
+
+
+### Features
+
+* **env:** remove consola from client side ([725ac87](https://github.com/lihbr/utils-nuxt/commit/725ac87efef52d9a183fd15fa5f320a7fd34743a))
+
+
+
+
+
 ## [0.1.2](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.env@0.1.1...@lihbr/utils-nuxt.env@0.1.2) (2020-09-30)
 
 
