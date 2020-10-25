@@ -56,7 +56,7 @@ export default {
 
 ## Usage
 
-This module injects a `$pagePayload` method inside Nuxt.js context allowing your to resolve page payload provided through Nuxt.js [generate routes payload options](https://nuxtjs.org/guides/configuration-glossary/configuration-generate#speeding-up-dynamic-route-generation-with-payload):
+This module injects a `$pagePayload` method inside Nuxt.js context allowing you to resolve page payload provided through Nuxt.js [generate routes payload options](https://nuxtjs.org/guides/configuration-glossary/configuration-generate#speeding-up-dynamic-route-generation-with-payload):
 
 ```vue[~/pages/index.vue]
 <script>
