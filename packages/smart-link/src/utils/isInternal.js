@@ -1,5 +1,3 @@
-const logger = require("../logger");
-
 /**
  * Finds out whether or not link should be external
  * @param {Boolean} external - force an external link
@@ -10,7 +8,7 @@ const logger = require("../logger");
 const isInternal = ({ external, internal, href }) => {
   if (external && internal) {
     /* eslint-disable-next-line prettier/prettier */
-    logger.warn("props \"external\" and \"internal\" are both true and conflicting with each other, giving priority to \"external\"");
+    console.warn("props \"external\" and \"internal\" are both true and conflicting with each other, giving priority to \"external\"");
     return false;
   }
 

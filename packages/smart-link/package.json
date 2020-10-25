@@ -22,7 +22,6 @@
     "directory": "packages/smart-link"
   },
   "dependencies": {
-    "consola": "2.15.0",
     "vue-functional-data-merge": "3.1.0"
   }
 }
