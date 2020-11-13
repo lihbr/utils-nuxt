@@ -69,6 +69,8 @@ Vue.prototype.$buildHead = ({
   path,
   additionalStructuredData = []
 } = {}) => {
+  const url = path ? `${APP_URL}${path}`.replace(/\/$/, "") : APP_URL;
+
   const itempropMeta = [
     {
       hid: "itemprop_name",
@@ -88,14 +90,7 @@ Vue.prototype.$buildHead = ({
     {
       hid: "og:url",
       property: "og:url",
-      content: path,
-      template: path => {
-        if (path) {
-          return `${APP_URL}${path}`.replace(/\/$/, "");
-        } else {
-          return APP_URL;
-        }
-      }
+      content: url
     },
     {
       hid: "og:title",
@@ -151,6 +146,7 @@ Vue.prototype.$buildHead = ({
   return {
     title,
     titleTemplate: metaTitleTemplate,
+    link: [{ rel: "canonical", href: url }],
     meta: [
       {
         hid: "description",
@@ -171,7 +167,7 @@ Vue.prototype.$buildHead = ({
           {
             "@context": "http://schema.org",
             "@type": "WebSite",
-            url: `${APP_URL}${path ? path : ""}`.replace(/\/$/, ""),
+            url,
             name: title,
             alternateName: APP_NAME
           },
