@@ -13,6 +13,8 @@
     "nuxt": "2.14.6"
   },
   "devDependencies": {
-    "@nuxtjs/netlify-files": "1.2.0"
+    "@nuxtjs/netlify-files": "1.2.0",
+    "dotenv": "8.2.0",
+    "nuxt-ackee": "2.0.0"
   }
 }
