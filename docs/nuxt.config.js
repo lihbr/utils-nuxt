@@ -21,7 +21,7 @@ export default theme({
     [
       "nuxt-ackee",
       {
-        server: "https://ackee.lihbr.com",
+        server: process.env.ACKEE_ENDPOINT,
         domainId: process.env.ACKEE_ID,
         ignoreLocalhost: true,
         detailed: true
