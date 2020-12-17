@@ -98,21 +98,6 @@ const configure = (pkg = {}, settings = {}, GLOBAL_CONTENT) => {
     "en"
   );
 
-  /**
-   * Tracking
-   */
-
-  // Google Tag Manager id
-  const GTM_ID = firstTrue(settings.tracking_gtm_id, process.env.GTM_ID, "");
-  // Whether or not to respect browser "do not track" flag
-  const GTM_FRIENDLY = !!(() => {
-    if (typeof settings.tracking_friendly !== "undefined") {
-      return settings.tracking_friendly;
-    } else {
-      return firstTrue(process.env.GTM_FRIENDLY, true);
-    }
-  })();
-
   return {
     DEV,
     COMMIT_REF,
@@ -131,9 +116,6 @@ const configure = (pkg = {}, settings = {}, GLOBAL_CONTENT) => {
     APP_PORT,
     APP_URL,
     APP_LANG,
-
-    GTM_ID,
-    GTM_FRIENDLY,
 
     GLOBAL_CONTENT
   };
