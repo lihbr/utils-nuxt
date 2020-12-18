@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.env@0.2.0...@lihbr/utils-nuxt.env@0.3.0) (2020-12-18)
+
+
+### Features
+
+* **env:** remove tracking variables ([353ca7f](https://github.com/lihbr/utils-nuxt/commit/353ca7fd3cfeff41786eed81c4d323346fad0bc8))
+
+
+
+
+
 # [0.2.0](https://github.com/lihbr/utils-nuxt/compare/@lihbr/utils-nuxt.env@0.1.2...@lihbr/utils-nuxt.env@0.2.0) (2020-10-25)
 
 
