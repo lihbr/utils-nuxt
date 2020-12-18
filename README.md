@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://utils-nuxt.lihbr.com">
-    <img src="https://images.prismic.io/lihbr/f583056f-b9cd-4734-bbb4-35b212265874_utils-nuxt.png?auto=compress,format" alt="utils-nuxt" height="128" />
+    <img src="docs/static/logo-dark--min.svg" alt="utils-nuxt" height="128" />
   </a>
 </p>
 
