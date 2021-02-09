@@ -1,22 +1,19 @@
 require("dotenv").config();
 
 import path from "path";
-import theme from "@nuxt/content-theme-docs";
+import { withDocus } from "docus";
 
-export default theme({
+export default withDocus({
   loading: {
     color: "#e84311"
   },
+  css: [
+    path.join(__dirname, "/assets/css/main.css"),
+    path.join(__dirname, "/assets/css/prism.css")
+  ],
   buildModules: [
     ["@nuxtjs/netlify-files", { existingFilesDirectory: __dirname }]
   ],
-  content: {
-    markdown: {
-      prism: {
-        theme: path.join(__dirname, "/assets/css/prism.css")
-      }
-    }
-  },
   buildModules: [
     [
       "nuxt-ackee",

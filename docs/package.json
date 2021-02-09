@@ -9,8 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content-theme-docs": "0.7.2",
-    "nuxt": "2.14.6"
+    "docus": "0.0.5",
+    "nuxt": "2.14.12"
   },
   "devDependencies": {
     "@nuxtjs/netlify-files": "1.2.0",
