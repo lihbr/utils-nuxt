@@ -1,5 +1,5 @@
-const isInternal = require("./isInternal");
+const getLinkTag = require("./getLinkTag");
 
 module.exports = {
-  isInternal
+  getLinkTag
 };

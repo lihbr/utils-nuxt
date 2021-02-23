@@ -1,9 +1,13 @@
 /* HEALTH:HIGH smart-link */
 const { mergeData } = require("vue-functional-data-merge/dist/lib.common.js");
 
-const { isInternal } = require("./utils");
+const { getLinkTag } = require("./utils");
 
-const FRAMEWORK_LINK = "nuxt-link";
+const SPAN_TAG = "span";
+const ANCHOR_TAG = "a";
+const FRAMEWORK_LINK = "nuxt-link"; // or "nuxt-link", "g-link"...
+
+const ANCHOR_REL_ATTRIBUTE = "noopener";
 
 const SmartLink = {
   name: "SmartLink",
@@ -26,48 +30,48 @@ const SmartLink = {
       default: false
     }
   },
-  render(createElement, { props, data, slots }) {
-    // Resolve html tag
-    let htmlTag = "span";
-    if (props.href) {
-      if (isInternal(props) && !props.blank) {
-        htmlTag = FRAMEWORK_LINK;
-      } else {
-        htmlTag = "a";
-      }
-    }
+  render(h, context) {
+    // Resolve link tag
+    const tag = getLinkTag(context.props, {
+      SPAN_TAG,
+      ANCHOR_TAG,
+      FRAMEWORK_LINK
+    });
 
-    // Forward event listeners if not an internal link
-    let on = {};
-    if (htmlTag !== FRAMEWORK_LINK) {
-      on = { ...data.nativeOn };
-      delete data.nativeOn;
-    }
+    // Create new data object
+    const data = {
+      class: "smartLink"
+    };
+    switch (tag) {
+      case ANCHOR_TAG:
+        // Map `href` prop to the correct attribute
+        data.attrs = {
+          href: context.props.href
+        };
 
-    // Apply right attributes depending on final link type
-    const attrs = {};
-    switch (htmlTag) {
-      case FRAMEWORK_LINK:
-        attrs.to = props.href;
+        // Handle `blank` prop
+        if (context.props.blank) {
+          data.attrs.target = "_blank";
+          data.attrs.rel = ANCHOR_REL_ATTRIBUTE;
+        }
+
+        // Transform native events to regular events for HTML anchor tag
+        data.on = { ...context.data.nativeOn };
+        delete context.data.nativeOn;
         break;
 
-      case "a":
-        attrs.href = props.href;
-        if (props.blank) {
-          attrs.target = "_blank";
-          attrs.rel = "noopener";
-        }
+      case FRAMEWORK_LINK:
+        // Map `href` prop to the correct prop
+        data.props = {
+          to: context.props.href
+        };
         break;
 
       default:
         break;
     }
 
-    return createElement(
-      htmlTag,
-      mergeData(data, { class: "smartLink", attrs, on }),
-      slots().default
-    );
+    return h(tag, mergeData(context.data, data), context.slots().default);
   }
 };
 
