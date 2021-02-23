@@ -22,8 +22,8 @@
     "directory": "packages/payload"
   },
   "dependencies": {
-    "consola": "2.15.0",
+    "consola": "2.15.3",
     "isomorphic-unfetch": "3.1.0",
-    "lodash": "4.17.20"
+    "lodash": "4.17.21"
   }
 }

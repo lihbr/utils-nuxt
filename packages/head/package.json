@@ -22,7 +22,7 @@
     "directory": "packages/head"
   },
   "dependencies": {
-    "consola": "2.15.0",
-    "lodash": "4.17.20"
+    "consola": "2.15.3",
+    "lodash": "4.17.21"
   }
 }

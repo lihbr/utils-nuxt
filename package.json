@@ -30,14 +30,14 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
+    "@commitlint/cli": "12.0.0",
+    "@commitlint/config-conventional": "12.0.0",
     "babel-eslint": "10.1.0",
-    "eslint": "7.11.0",
-    "eslint-config-prettier": "6.12.0",
-    "eslint-plugin-prettier": "3.1.4",
-    "husky": "4.3.0",
+    "eslint": "7.20.0",
+    "eslint-config-prettier": "8.0.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "husky": "4.3.8",
     "lerna": "3.22.1",
-    "prettier": "2.1.2"
+    "prettier": "2.2.1"
   }
 }
