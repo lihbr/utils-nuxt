@@ -10,8 +10,8 @@ version: 0.1
 fullscreen: false
 ---
 
-<img src="/preview.png" class="light-img" width="1280" height="640" alt="lihbr/utils-nuxt logo" />
-<img src="/preview-dark.png" class="dark-img" width="1280" height="640" alt="lihbr/utils-nuxt logo" />
+<img src="/preview.jpg" class="light-img" width="1280" height="640" alt="lihbr/utils-nuxt logo" />
+<img src="/preview-dark.jpg" class="dark-img" width="1280" height="640" alt="lihbr/utils-nuxt logo" />
 
 `@lihbr/utils-nuxt.*` are helpers I use across my [Nuxt.js](https://nuxtjs.org) projects. To achieve that purpose they are designed to be as agnostic as possible, although being quite opinionated.
 
