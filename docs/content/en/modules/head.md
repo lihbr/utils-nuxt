@@ -154,13 +154,13 @@ Application default meta image used for Open Graph (`og`) and Twitter (`tw`) met
 {
   metaImage: {
     og: "https://example.com/1200x630.jpg",
-    tw: "https://example.com/1200x600.jpg"
+    tw: "https://example.com/1200x630.jpg"
   }
 }
 ```
 <!-- prettier-ignore-end -->
 
-> Open Graph is differentiated from Twitter meta image because Open Graph prefers `1.91:1` aspect ratio where Twitter prefers `2:1`.
+> As of writing this, both Open Graph and Twitter prefer `1.91:1` for their image aspect ratio.
 
 #### twitterHandle
 
@@ -310,7 +310,7 @@ Page meta image used for Open Graph (`og`) and Twitter (`tw`) meta image tags.
 ```
 <!-- prettier-ignore-end -->
 
-> Open Graph is differentiated from Twitter meta image because Open Graph prefers `1.91:1` aspect ratio where Twitter prefers `2:1`.
+> As of writing this, both Open Graph and Twitter prefer `1.91:1` for their image aspect ratio.
 
 #### path
 
