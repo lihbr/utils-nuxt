@@ -19,7 +19,7 @@ fullscreen: false
 
 <alert type="warning">
 
-Those packages just got migrated to actual packages and are still pre-major version (`v1.x.x`). I'll most likely refactor them before releasing a first major and allow myself to publish breaking changes while doing so, therefore if you want to use them as is I highly recommend pinning their version (using `0.1.0` instead of `^0.1.0` in your `package.json`).
+Those packages just got migrated to actual packages and are still pre-major version (`v1.x.x`). I'll most likely refactor them before releasing a first major and allow myself to publish breaking changes while doing so, therefore if you want to use them as is I highly recommend watching out when upgrading their versions.
 
 Also feel free to inspire from them, [submit feedback or questions](https://github.com/lihbr/utils-nuxt/issues/new), or fork this repository~
 
