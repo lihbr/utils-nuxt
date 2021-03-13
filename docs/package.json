@@ -1,5 +1,5 @@
 {
-  "name": "@lihbr/utils-nuxt.doc",
+  "name": "@lihbr/utils-nuxt.docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "docus": "0.0.5",
-    "nuxt": "2.14.12"
+    "docus": "0.0.10",
+    "nuxt": "2.15.3"
   },
   "devDependencies": {
-    "@nuxtjs/netlify-files": "1.2.0",
-    "dotenv": "8.2.0",
-    "nuxt-ackee": "2.0.0"
+    "@nuxtjs/ackee": "3.0.1"
   }
 }

@@ -1,7 +1,7 @@
 # Global context
 [build]
   # Base directory
-  base = ""
+  base = "docs"
   # Build command
   command = "yarn generate"
   # Build directory
@@ -43,7 +43,7 @@
 [context.branch-deploy]
 
 [context.branch-deploy.processing]
-  skip_processing = false
+  skip_processing = true
 
 [[redirects]]
   from = "https://lihbr-utils-nuxt.netlify.app/*"

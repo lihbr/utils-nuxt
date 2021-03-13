@@ -1,19 +1,14 @@
-require("dotenv").config();
-
 import path from "path";
 import { withDocus } from "docus";
 
 export default withDocus({
-  loading: {
-    color: "#e84311"
-  },
   css: [
     path.join(__dirname, "/assets/css/main.css"),
     path.join(__dirname, "/assets/css/prism.css")
   ],
-  buildModules: [
-    ["@nuxtjs/netlify-files", { existingFilesDirectory: __dirname }]
-  ],
+  generate: {
+    fallback: true
+  },
   buildModules: [
     [
       "nuxt-ackee",
