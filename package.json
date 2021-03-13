@@ -2,7 +2,7 @@
   "name": "utils-nuxt",
   "description": "lihbr utils for Nuxt.js",
   "private": true,
-  "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
+  "author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
   "license": "MIT",
   "scripts": {
     "lerna": "lerna",
@@ -13,8 +13,8 @@
     "lint": "eslint --ext .js,.ts ."
   },
   "engines": {
-    "node": ">=10.16.3",
-    "yarn": ">=1.13.0"
+    "node": ">=12.18.0",
+    "yarn": ">=1.22.0"
   },
   "repository": {
     "type": "git",
