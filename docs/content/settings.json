@@ -2,13 +2,19 @@
   "title": "lihbr/utils-nuxt",
   "description": "lihbr utils for Nuxt.js",
   "url": "https://utils-nuxt.lihbr.com",
+  "layout": "docs",
   "logo": {
     "light": "/logo-light.svg",
     "dark": "/logo-dark.svg"
   },
+  "header": {
+    "logo": true,
+    "title": false
+  },
+  "twitter": "@li_hbr",
   "github": {
     "repo": "lihbr/utils-nuxt",
     "branch": "master"
   },
-  "twitter": "@li_hbr"
+  "credits": true
 }

@@ -11,7 +11,7 @@ export default withDocus({
   },
   buildModules: [
     [
-      "nuxt-ackee",
+      "@nuxtjs/ackee",
       {
         server: process.env.ACKEE_ENDPOINT,
         domainId: process.env.ACKEE_ID,
