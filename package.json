@@ -13,8 +13,7 @@
     "lint": "eslint --ext .js,.ts ."
   },
   "engines": {
-    "node": ">=12.18.0",
-    "yarn": ">=1.22.0"
+    "node": ">=12.0.0"
   },
   "repository": {
     "type": "git",
@@ -30,14 +29,14 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "12.0.0",
-    "@commitlint/config-conventional": "12.0.0",
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
     "babel-eslint": "10.1.0",
-    "eslint": "7.20.0",
-    "eslint-config-prettier": "8.0.0",
+    "eslint": "7.22.0",
+    "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",
     "husky": "4.3.8",
-    "lerna": "3.22.1",
+    "lerna": "4.0.0",
     "prettier": "2.2.1"
   }
 }
