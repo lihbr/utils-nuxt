@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "docus": "0.1.5",
-    "nuxt-edge": "latest"
+    "nuxt-edge": "^2.16.0-26929477.f08f4efc"
   },
   "devDependencies": {
     "@nuxtjs/ackee": "3.0.1"
