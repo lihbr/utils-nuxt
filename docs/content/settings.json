@@ -14,7 +14,9 @@
   "twitter": "@li_hbr",
   "github": {
     "repo": "lihbr/utils-nuxt",
-    "branch": "master"
+    "branch": "master",
+    "dir": "docs",
+    "releases": false
   },
   "credits": true
 }
