@@ -52,3 +52,9 @@
   to = "https://utils-nuxt.lihbr.com/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://utils-nuxt.lucie.red/*"
+  to = "https://utils-nuxt.lihbr.com/:splat"
+  status = 301
+  force = true
