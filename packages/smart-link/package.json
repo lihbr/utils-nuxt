@@ -12,8 +12,7 @@
     "node": ">=12.0.0"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,6 @@
     "directory": "packages/smart-link"
   },
   "dependencies": {
-    "vue-functional-data-merge": "3.1.0"
+    "vue-functional-data-merge": "^3.1.0"
   }
 }

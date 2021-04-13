@@ -12,8 +12,7 @@
     "node": ">=12.0.0"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,7 @@
     "directory": "packages/head"
   },
   "dependencies": {
-    "consola": "2.15.3",
-    "lodash": "4.17.21"
+    "consola": "^2.15.3",
+    "lodash": "^4.17.21"
   }
 }
