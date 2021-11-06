@@ -1,4 +1,4 @@
-const defaultsDeep = require("lodash/defaultsDeep");
+const defaultsDeep = require("lodash.defaultsDeep");
 
 const logger = require("./logger");
 

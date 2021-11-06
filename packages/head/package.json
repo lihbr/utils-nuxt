@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "consola": "^2.15.3",
-    "lodash": "^4.17.21"
+    "lodash.defaultsdeep": "4.6.1"
   }
 }

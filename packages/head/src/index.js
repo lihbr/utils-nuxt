@@ -1,5 +1,5 @@
 const path = require("path");
-const defaultsDeep = require("lodash/defaultsDeep");
+const defaultsDeep = require("lodash.defaultsDeep");
 
 const setGlobal = require("./setGlobal");
 
@@ -35,7 +35,7 @@ module.exports = function (moduleOptions) {
   if (typeof this.options.head === "function") {
     return logger.fatal(
       /* eslint-disable-next-line prettier/prettier */
-      "\"head\" is provided as a function which is not supported by head module, disabling module"
+      '"head" is provided as a function which is not supported by head module, disabling module'
     );
   }
 

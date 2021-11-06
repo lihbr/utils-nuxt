@@ -1,4 +1,4 @@
-const get = require("lodash/get");
+const get = require("lodash.get");
 
 const { firstTrue } = require("./utils");
 
@@ -87,7 +87,9 @@ const configure = (pkg = {}, settings = {}, GLOBAL_CONTENT) => {
         return process.env.APP_URL;
       } else {
         /* eslint-disable-next-line prettier/prettier */
-        throw new Error("`process.env.APP_URL` should be defined when `NODE_ENV !== \"development\"`!");
+        throw new Error(
+          '`process.env.APP_URL` should be defined when `NODE_ENV !== "development"`!'
+        );
       }
     }
   })();
